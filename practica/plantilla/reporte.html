@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block titulo %} ---------- FACTURA -------------{%  endblock %}
+{% block encabezado %}
+	<h1> --- FACTURA -----</h1>
+{% endblock %}
+
+{% block contenido %}
+
+<ul>
+	
+	<li> {% for dato in facturas %}	
+		<p>{{dato.id}}</p>
+				 
+		<ul>{% for item in detalle %}
+				{% if dato.id == item.factura.id %}			
+					<li> {{item.producto.nombre}}</li>
+					<li>{{item.precio}}</li>
+				{% endif %}				
+			{% endfor %}
+		  </ul>
+		{% endfor %}
+	</li>	
+</ul>
+
+
+{% endblock %}

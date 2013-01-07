@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+	<meta charset='utf-8'>
+	<title> Reporte Facturas {% block titulo %}{% endblock %}</title>
+	<style> {% block style_css %}{% endblock %}
+	</style>
+</head>
+<body>
+<header>
+	{% block encabezado %}{% endblock %}
+	<nav>
+		<ul>
+			<li><a href='/'>Inicio</a></li>
+			<li><a href='/reporte'>Factura</a></li>			
+
+		</ul>
+	</nav>
+</header>
+
+<section class='contenido'>
+	{% block contenido %}{% endblock %}
+</section>
+
+<footer>
+	<p>Proyecto de ejemplo par el curso de Django de Maestros del Web &copy;2012</p>
+</footer>
